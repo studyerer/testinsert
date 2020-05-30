@@ -1,0 +1,15 @@
+set foreign_key_checks=0;
+
+drop table if exists 'srf_user';
+create table 'srf_user' (
+     'user_id' int(11) not null auto_increment comment '用户ID',
+     'login_name' VARCHAR(20) DEFAULT ' ' comment '登录账户',
+     `phonenumber` VARCHAR(20) DEFAULT '' COMMENT '手机号码',
+     `password` VARCHAR(100) DEFAULT '' COMMENT '密码',
+     `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
+PRIMARY KEY (`user_id`)
+ )ENGINE=INNODB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
+
+
+insert into 'srf_user' values ('1','12345678900' '12345678900','123456','2018-06-04 16:58:19');
+set foreign_key_checks=1;
